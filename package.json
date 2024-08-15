@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "dev": "ts-node ./script.ts",
+    "data-migration:add-status-column": "ts-node ./prisma/migrations/20240815180655_add_status_column/data-migration.ts"
   },
   "dependencies": {
     "@prisma/client": "^5.18.0",
@@ -13,5 +15,8 @@
     "express": "^4.19.2",
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.3.0"
   }
 }
